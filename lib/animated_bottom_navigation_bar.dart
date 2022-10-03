@@ -411,7 +411,7 @@ class _AnimatedBottomNavigationBarState
         gradient: widget.backgroundGradient,
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: EdgeInsets.symmetric(horizontal: 7),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
