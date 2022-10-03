@@ -410,10 +410,13 @@ class _AnimatedBottomNavigationBarState
         color: widget.backgroundColor ?? Colors.white,
         gradient: widget.backgroundGradient,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: _buildItems(),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: _buildItems(),
+        ),
       ),
     );
   }
