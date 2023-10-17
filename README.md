@@ -1,9 +1,10 @@
-# animated-bottom-navigation-bar
+[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
+
 AnimatedBottomNavigationBar is a customizable widget inspired by [dribble shot](https://dribbble.com/shots/7134849-Simple-Tab-Bar-Animation).
 
-Made in [lanars.com](https://lanars.com).
-
 [![pub package](https://img.shields.io/pub/v/animated_bottom_navigation_bar.svg)](https://pub.dev/packages/animated_bottom_navigation_bar)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/lanars)
 
 <img src="https://raw.githubusercontent.com/LanarsInc/animated-bottom-navigation-bar-flutter/master/doc/assets/animated-bottom-navigation-bar.gif" width="300">
 
@@ -13,7 +14,7 @@ With `AnimatedBottomNavigationBar.builder` you are able to customize tab view ho
 
 # Getting Started
 
-To get started, place your `AnimatedBottomNavigationBar` in the bottomNavigationBar slot of a `Scaffold`.
+To get started, place your `AnimatedBottomNavigationBar` or `AnimatedBottomNavigationBar.builder` in the bottomNavigationBar slot of a `Scaffold`.
 The `AnimatedBottomNavigationBar` respects `FloatingActionButton` location.
 For example:
 
@@ -36,6 +37,34 @@ Scaffold(
    ),
 );
 ```
+
+There is also a more flexible way to build `bottomNavigationBar` with Builder (see [example](https://pub.dev/packages/animated_bottom_navigation_bar/example) for more insights): 
+```dart
+Scaffold(
+   body: Container(), //destination screen
+   floatingActionButton: FloatingActionButton(
+      //params
+   ),
+   floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+   bottomNavigationBar: AnimatedBottomNavigationBar.builder(
+      itemCount: iconList.length,
+      tabBuilder: (int index, bool isActive) {
+        return Icon(
+          iconList[index],
+          size: 24,
+          color: isActive ? colors.activeNavigationBarColor : colors.notActiveNavigationBarColor,
+        );
+      activeIndex: _bottomNavIndex,
+      gapLocation: GapLocation.center,
+      notchSmoothness: NotchSmoothness.verySmoothEdge,
+      leftCornerRadius: 32,
+      rightCornerRadius: 32,
+      onTap: (index) => setState(() => _bottomNavIndex = index),
+      //other params
+   ),
+);
+```
+
 
 <img src="https://raw.githubusercontent.com/LanarsInc/animated-bottom-navigation-bar-flutter/master/doc/assets/example-cornered-notched-bar.jpeg" width="300">
 

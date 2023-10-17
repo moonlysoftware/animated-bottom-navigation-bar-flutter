@@ -1,3 +1,18 @@
+## [1.3.0] - 2023-09-22
+* Add `scaleFactor` parameter by [Oubi256](https://github.com/Oubi256) 
+* Update README.md
+
+## [1.2.1] - 2023-09-13
+* Bump sdk version to `>=2.12.0 <4.0.0`
+* Update README.md
+
+## [1.2.0] - 2023-03-09
+* Fix [#46](https://github.com/LanarsInc/animated-bottom-navigation-bar-flutter/issues/46)
+* Update example
+
+## [1.1.0+1] - 2022-12-27
+* Update README.md
+
 ## [1.1.0] - 2022-08-18
 * Add `elevation` parameter
 * Remove default value for `shadow`
@@ -47,7 +62,7 @@
 
 ## [0.1.2+2] - 2020-04-24.
 
-* Update package README
+* Update package README.md
 
 ## [0.1.2+1] - 2020-04-23.
 
@@ -55,7 +70,7 @@
 
 ## [0.1.2] - 2020-04-23.
 
-* Update example README
+* Update example README.md
 
 ## [0.1.1] - 2020-04-23.
 
